@@ -11,7 +11,7 @@
     "debug": "nest start --debug --watch",
     "lint:ci": "eslint . --ext .ts",
     "lint": "npm run lint:ci -- --fix",
-    "test": "dotenv -e .test.env jest",
+    "test": "jest --watch --passWithNoTests",
     "test:watch": "npm run test -- --watch",
     "spell": "cspell ./src/**/*",
     "prepare": "./scripts/prepare"
@@ -43,6 +43,7 @@
     "eslint": "8.23.0",
     "husky": "8.0.0",
     "jest": "28.0.0",
+    "jest-mock-extended": "3.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "source-map-support": "0.5.21",
