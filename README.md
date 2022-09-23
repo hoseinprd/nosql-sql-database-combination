@@ -34,17 +34,23 @@ src/common/
 ## Usage
 
 ### Step 1
-`npm run install`
+```
+npm run install
+```
 
-If there is docker + docker compose available to you:
+If there is `docker + docker` compose available to you:
 
 Connecting to database:
 
-`docker compose up -d`
+```
+docker compose up -d
+```
 
 then
 
-`npm run dev`
+```
+npm run dev
+```
 
 if there is no docker and docker compose:
 
@@ -52,11 +58,15 @@ first run your own db:
 
 and modify dev as scripts in `package.json`
 
-`DB_HOST=your_mongodb_uri nest start --watch`
+```
+DB_HOST=your_mongodb_uri nest start --watch
+```
 
 
 then
 
-`npm run dev`
+```
+npm run dev
+```
 
 
