@@ -33,7 +33,6 @@ src/common/
 
 ## Usage
 
-### Step 1
 ```
 npm run install
 ```
