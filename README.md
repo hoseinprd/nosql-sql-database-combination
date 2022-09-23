@@ -68,4 +68,7 @@ then
 npm run dev
 ```
 
-
+## UNIT TEST
+```
+npm run test
+```
