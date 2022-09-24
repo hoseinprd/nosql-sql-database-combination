@@ -37,7 +37,7 @@ src/common/
 npm run install
 ```
 
-If there is `docker + docker` compose available to you:
+If there is `docker` & `docker-compose` available to you:
 
 Connecting to database:
 
