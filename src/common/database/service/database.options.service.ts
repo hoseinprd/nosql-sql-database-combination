@@ -8,6 +8,7 @@ import mongoose from 'mongoose';
 @Injectable()
 export class DatabaseOptionsService implements MongooseOptionsFactory {
   private readonly host: string;
+  private readonly port: string;
   private readonly database: string;
   private readonly debug: boolean;
   private readonly isDev: boolean;
@@ -15,12 +16,13 @@ export class DatabaseOptionsService implements MongooseOptionsFactory {
   constructor() {
     this.isDev = true;
     this.host = process.env['DB_HOST']!;
-    this.database = 'db_name';
+    this.port = process.env['DB_PORT']!;
+    this.database = process.env['DB_NAME']!;
     this.debug = true;
   }
 
   createMongooseOptions(): MongooseModuleOptions {
-    const uri = `${this.host}/${this.database}`;
+    const uri = `mongodb://${this.host}:${this.port}/${this.database}`;
 
     if (this.isDev) {
       mongoose.set('debug', this.debug);
