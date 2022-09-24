@@ -12,9 +12,12 @@ describe('RepositoryService', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        UserRepository,
         RepositoryService,
-        { provide: getModelToken(User.name), useValue: jest.fn() },
+        UserRepository,
+        {
+          provide: getModelToken(User.name),
+          useValue: jest.fn(),
+        },
       ],
     }).compile();
 
